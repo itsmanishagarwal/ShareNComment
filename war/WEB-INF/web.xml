@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<description>Share n Comment</description>
+  
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>gp</servlet-name>
+    <servlet-class>gp.GPServlet</servlet-class>
+  </servlet>
+   <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>gp.DeleteCommentsServlet</servlet-class>
+    </servlet>
+
+   <servlet>
+        <servlet-name>sign</servlet-name>
+        <servlet-class>gp.SignGuestbookServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>gp.UploadPhotosServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>uploadbooks</servlet-name>
+        <servlet-class>gp.UploadBooksServlet</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>comment</servlet-name>
+        <servlet-class>gp.AddCommentsServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>image</servlet-name>
+        <servlet-class>gp.ShowImage</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>chat</servlet-name>
+        <servlet-class>gp.ChatServlet</servlet-class>
+    </servlet>
+ 
+  
+  <servlet-mapping>
+    <servlet-name>gp</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sign</servlet-name>
+        <url-pattern>/sign</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>   
+    <servlet-mapping>
+        <servlet-name>comment</servlet-name>
+        <url-pattern>/comment</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>
+        <servlet-name>upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>     
+    <servlet-mapping>
+        <servlet-name>uploadbooks</servlet-name>
+        <url-pattern>/uploadbooks</url-pattern>
+    </servlet-mapping>     
+    <servlet-mapping>
+        <servlet-name>image</servlet-name>
+        <url-pattern>/image</url-pattern>
+    </servlet-mapping>    
+
+    <servlet-mapping>
+        <servlet-name>chat</servlet-name>
+        <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+    </servlet-mapping>
+  <!-- Default page to serve -->
+	<welcome-file-list>
+        <welcome-file>AllPhotos.jsp</welcome-file>
+    </welcome-file-list>
+
+
+
+</web-app>
